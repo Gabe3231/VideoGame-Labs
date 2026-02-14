@@ -13,9 +13,9 @@ config_version=5
 config/name="Lab1"
 run/main_scene="uid://c7j515ars43yn"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Assets/icon.svg"
 
 [display]
 
-window/size/viewport_width=864
-window/size/viewport_height=936
+window/size/viewport_width=3000
+window/size/viewport_height=1000
