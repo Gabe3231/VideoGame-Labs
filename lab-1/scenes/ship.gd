@@ -19,6 +19,7 @@ func reset():
 	position = start_pos
 	set_rotation(0)
 
+#lab 2 functionality. Needs to be better optimized
 func _physics_process(delta):
 	if flying or falling:
 		velocity.y += Gravity * delta
