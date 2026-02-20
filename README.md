@@ -8,4 +8,4 @@ Lab 1 is my attempt to complete the requirements of Lab 1 assignment. I was atte
 Additionally, all assets were pulled from the folders I included. I took screenshots of some of them as the assets had many within one JPG. I credit the creators of the sprites by including the license for their work in their respective asset folders.
 
 Lab 2
-TBD
+Lab 2 is complete
