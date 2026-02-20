@@ -5,7 +5,7 @@ var game_running : bool
 var game_over : bool
 var scroll
 var score
-const scroll_speed : int = 4
+@export var scroll_speed: int = 4
 var screen_size : Vector2i
 var ground_height : int
 var pipes : Array
@@ -22,17 +22,6 @@ func new_game():
 	score = 0
 	scroll = 0
 	$ship.reset()
-	
-func _input(event):
-	if game_over == false:
-		# usinf mouse for now may transition to ekybinds
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if game_running == false:
-					start_game()
-				else:
-					if $ship.flying:
-						$ship.flap()
 
 func start_game():
 	game_running = true
@@ -40,8 +29,16 @@ func start_game():
 	$ship.flap()
 	
 func _process(delta):
+	# input using Maped input
+	if not game_over and Input.is_action_just_pressed("flap"):
+		if not game_running:
+			start_game()
+		elif $ship.flying:
+			$ship.flap()
 	if game_running:
-		scroll += scroll_speed
-		if scroll >= screen_size.x:
+		scroll -= scroll_speed
+		if scroll <= -screen_size.x:
 			scroll = 0
-		$ground.position.x = +scroll
+		$ground.position.x = scroll
+		
+# need to implment death 
