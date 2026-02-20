@@ -20,20 +20,20 @@ func reset():
 	set_rotation(0)
 
 #lab 2 functionality. Needs to be better optimized
-func _physics_process(delta):
-	if flying or falling:
-		velocity.y += Gravity * delta
-		if velocity.y > MAX_VEL:
-			velocity.y = MAX_VEL
-		if flying:
-			set_rotation(deg_to_rad(velocity.y * 0.05))
-			$AnimatedSprite2D.play()
-		elif falling:
-			set_rotation(PI / 2)
-			$AnimatedSprite2D.stop()
-		move_and_slide()
-	else:
-		$AnimatedSprite2D.stop()
+# func _physics_process(delta):
+# 	if flying or falling:
+# 		velocity.y += Gravity * delta
+# 		if velocity.y > MAX_VEL:
+# 			velocity.y = MAX_VEL
+# 		if flying:
+# 			set_rotation(deg_to_rad(velocity.y * 0.05))
+# 			$AnimatedSprite2D.play()
+# 		elif falling:
+# 			set_rotation(PI / 2)
+# 			$AnimatedSprite2D.stop()
+# 		move_and_slide()
+# 	else:
+# 		$AnimatedSprite2D.stop()
 
-func flap():
-	velocity.y = flap_speed
+# func flap():
+# 	velocity.y = flap_speed

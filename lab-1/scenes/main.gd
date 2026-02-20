@@ -21,20 +21,21 @@ func new_game():
 	score = 0
 	scroll = 0
 	$ship.reset()
-	
-func _input(event):
-	if game_over == false:
-		# usinf mouse for now may transition to ekybinds
-		if event is InputEventMouseButton:
-			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-				if game_running == false:
-					start_game()
-				else:
-					if $ship.flying:
-						$ship.flap()
 
-func start_game():
-	game_running = true
-	$ship.flying = true
-	$ship.flap()
+#lab 2 stuff ignore
+# func _input(event):
+# 	if game_over == false:
+# 		# usinf mouse for now may transition to ekybinds
+# 		if event is InputEventMouseButton:
+# 			if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+# 				if game_running == false:
+# 					start_game()
+# 				else:
+# 					if $ship.flying:
+# 						$ship.flap()
+
+# func start_game():
+# 	game_running = true
+# 	$ship.flying = true
+# 	$ship.flap()
 	
