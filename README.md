@@ -8,9 +8,11 @@ Lab 1 is my attempt to complete the requirements of Lab 1 assignment. I was atte
 Additionally, all assets were pulled from the folders I included. I took screenshots of some of them as the assets had many within one JPG. I credit the creators of the sprites by including the license for their work in their respective asset folders.
 
 #Lab 2
+
 Lab 2 is complete
 
 #Lab 4
+
 Lab 4 has been completed and contains a basic level with a charcter3D that is movable via w, a, s, d and arrow keys. CSG shapes were used in level construction. There is also a light source and camera with the camera following the player as it moves
 
 
