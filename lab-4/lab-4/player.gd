@@ -16,6 +16,7 @@ func _physics_process(delta: float) -> void:
 
 	# Geting the input direction and handle the movement which i decleared.
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	# normalized so players can't move faster diagnoaly IDK if they even can rn
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * SPEED
